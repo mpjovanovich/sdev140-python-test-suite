@@ -1,0 +1,5 @@
+- title: "test1"
+  inputs: [""]
+  expected_output: "1"
+  comparison_type: "equals"
+  is_bonus: false
