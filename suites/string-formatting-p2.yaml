@@ -1,7 +1,48 @@
-- title: "???"
+- title: "Prompt author first name"
   inputs: ["First", "Last", "Title", "0001"]
   expected_output: "Author first name: First"
   comparison_type: "contains"
   is_bonus: false
 
 
+- title: "Prompt author last name"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Author last name: Last"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Prompt title"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Book title: Title"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Prompt ISBN"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "ISBN: 0001"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Table header row"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Author                         Title                                ISBN"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Name listed as last, first"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Last, First"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Table underline row"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "________________________________________________________________________"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Table content row"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Last, First                    Title                                0001"
+  comparison_type: "contains"
+  is_bonus: false
