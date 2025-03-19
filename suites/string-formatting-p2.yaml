@@ -1,0 +1,7 @@
+- title: "???"
+  inputs: ["First", "Last", "Title", "0001"]
+  expected_output: "Author first name: First"
+  comparison_type: "contains"
+  is_bonus: false
+
+
