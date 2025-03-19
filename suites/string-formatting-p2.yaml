@@ -42,7 +42,7 @@
   is_bonus: false
 
 - title: "Table content row"
-  inputs: ["Georg", "Gullsby", "The Many Minds of G", "9191919"]
-  expected_output: "Table header row"
+  inputs: ["Georg", "Gullsby", "G is my Letter", "1111111111"]
+  expected_output: "Gullsby, Georg                 G is my Letter                 1111111111"
   comparison_type: "contains"
   is_bonus: false
