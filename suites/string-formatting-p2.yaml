@@ -30,8 +30,8 @@
   is_bonus: false
 
 - title: "Name listed as last, first"
-  inputs: ["First", "Last", "Title", "0001"]
-  expected_output: "Last, First"
+  inputs: ["Robert", "Heinlein", "Title", "0001"]
+  expected_output: "Heinlein, Robert"
   comparison_type: "contains"
   is_bonus: false
 
@@ -42,7 +42,7 @@
   is_bonus: false
 
 - title: "Table content row"
-  inputs: ["First", "Last", "Title", "0001"]
-  expected_output: "Last, First                    Title                                0001"
+  inputs: ["Georg", "Gullsby", "The Many Minds of G", "9191919"]
+  expected_output: "Table header row"
   comparison_type: "contains"
   is_bonus: false
