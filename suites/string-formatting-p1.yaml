@@ -15,3 +15,9 @@
   expected_output: "You are 10 years younger than Alan Turing."
   comparison_type: "contains"
   is_bonus: false
+
+- title: "Exact punctuation and spacing matched"
+  inputs: ["1922"]
+  expected_output: "Enter your year of birth: 1922\nYou are 10 years younger than Alan Turing."
+  comparison_type: "exact"
+  is_bonus: false
