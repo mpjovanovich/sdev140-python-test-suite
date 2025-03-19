@@ -1,0 +1,17 @@
+- title: "Correct prompt"
+  inputs: ["1986"]
+  expected_output: "Enter your year of birth: 1986"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Correct response - 1986"
+  inputs: ["1986"]
+  expected_output: "You are 74 years younger than Alan Turing."
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Correct response - 1922"
+  inputs: ["1922"]
+  expected_output: "You are 10 years younger than Alan Turing."
+  comparison_type: "contains"
+  is_bonus: false

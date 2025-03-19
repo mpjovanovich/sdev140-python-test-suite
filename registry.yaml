@@ -1,1 +1,3 @@
 test: suites/test.yaml
+string-formatting-p1: suites/string-formatting-p1.yaml
+string-formatting-p2: suites/string-formatting-p2.yaml
