@@ -66,21 +66,21 @@
   comparison_type: "contains"
   is_bonus: false
 
-# Edge cases
 - title: "Mixed tickets with loyalty discount"
   inputs: ["matinee", "5", "3", "yes"]
   expected_output: "Your total price is: $48.60"
   comparison_type: "contains"
   is_bonus: false
 
-- title: "Case insensitive showing input"
-  inputs: ["EVENING", "1", "0", "no"]
-  expected_output: "Your total price is: $15.00"
+# Bonus:
+- title: "Case insensitive loyalty input"
+  inputs: ["evening", "1", "0", "YES"]
+  expected_output: "Your total price is: $13.50"
   comparison_type: "contains"
   is_bonus: true
 
-- title: "Case insensitive loyalty input"
-  inputs: ["evening", "1", "0", "YES"]
+- title: "Trimmed loyalty input"
+  inputs: ["evening", "1", "0", " yes"]
   expected_output: "Your total price is: $13.50"
   comparison_type: "contains"
   is_bonus: true
