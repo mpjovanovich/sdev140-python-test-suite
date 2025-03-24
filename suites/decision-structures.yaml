@@ -1,0 +1,86 @@
+- title: "Correct prompt for showing"
+  inputs: ["evening", "3", "2", "yes"]
+  expected_output: "Is the movie a matinee or evening showing? (matinee/evening): "
+  comparison_type: "contains"
+  is_bonus: false
+# Basic prompt tests
+- title: "Correct prompt for showing"
+  inputs: ["evening", "3", "2", "yes"]
+  expected_output: "Is the movie a matinee or evening showing? (matinee/evening): "
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Correct prompt for total tickets"
+  inputs: ["evening", "3", "2", "yes"]
+  expected_output: "How many tickets would you like to purchase?: "
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Correct prompt for child tickets"
+  inputs: ["evening", "3", "2", "yes"]
+  expected_output: "How many of these tickets are for children?: "
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Correct prompt for loyalty"
+  inputs: ["evening", "3", "2", "yes"]
+  expected_output: "Are you a member of the loyalty program? (yes/no): "
+  comparison_type: "contains"
+  is_bonus: false
+
+# Price calculation tests
+- title: "Evening showing - single adult ticket, no discounts"
+  inputs: ["evening", "1", "0", "no"]
+  expected_output: "Your total price is: $15.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Matinee showing - single adult ticket, no discounts"
+  inputs: ["matinee", "1", "0", "no"]
+  expected_output: "Your total price is: $12.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Evening showing - single child ticket"
+  inputs: ["evening", "1", "1", "no"]
+  expected_output: "Your total price is: $13.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Matinee showing - single child ticket"
+  inputs: ["matinee", "1", "1", "no"]
+  expected_output: "Your total price is: $10.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Discount tests
+- title: "Loyalty discount test"
+  inputs: ["evening", "2", "1", "yes"]
+  expected_output: "Your total price is: $25.20"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Volume discount test (4+ tickets)"
+  inputs: ["evening", "4", "2", "no"]
+  expected_output: "Your total price is: $50.40"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Edge cases
+- title: "Mixed tickets with loyalty discount"
+  inputs: ["matinee", "5", "3", "yes"]
+  expected_output: "Your total price is: $48.60"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Case insensitive showing input"
+  inputs: ["EVENING", "1", "0", "no"]
+  expected_output: "Your total price is: $15.00"
+  comparison_type: "contains"
+  is_bonus: true
+
+- title: "Case insensitive loyalty input"
+  inputs: ["evening", "1", "0", "YES"]
+  expected_output: "Your total price is: $13.50"
+  comparison_type: "contains"
+  is_bonus: true
