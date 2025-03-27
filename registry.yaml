@@ -1,5 +1,5 @@
 test: suites/test.yaml
-string-formatting-p1: suites/string-formatting-p1.yaml
-string-formatting-p2: suites/string-formatting-p2.yaml
-decision-structures: suites/decision-structures.yaml
-password-checker: suites/password-checker.yaml
+string_formatting_p1: suites/string_formatting_p1.yaml
+string_formatting_p2: suites/string_formatting_p2.yaml
+decision_structures: suites/decision_structures.yaml
+password_checker: suites/password_checker.yaml
