@@ -3,3 +3,4 @@ string_formatting_p1: suites/string_formatting_p1.yaml
 string_formatting_p2: suites/string_formatting_p2.yaml
 decision_structures: suites/decision_structures.yaml
 password_checker: suites/password_checker.yaml
+number_pyramids: suites/number_pyramids.yaml

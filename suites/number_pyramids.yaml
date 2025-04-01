@@ -1,0 +1,32 @@
+# Basic input tests
+- title: "Height 2 pyramid"
+  inputs: ["2"]
+  expected_output: "Enter the height of the pyramid: 2\n 1\n123"
+  comparison_type: "equals"
+  is_bonus: false
+
+- title: "Height 4 pyramid"
+  inputs: ["4"]
+  expected_output: "Enter the height of the pyramid: 4\n   1\n  123\n 12345\n1234567"
+  comparison_type: "equals"
+  is_bonus: false
+
+- title: "Height 1 pyramid"
+  inputs: ["1"]
+  expected_output: "Enter the height of the pyramid: 1\n1"
+  comparison_type: "equals"
+  is_bonus: false
+
+# Input validation tests
+- title: "Zero height input"
+  inputs: ["0"]
+  expected_output: "Enter the height of the pyramid: 0"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Bonus tests - inverted pyramids
+- title: "Height 4 inverted pyramid (negative input)"
+  inputs: ["-4"]
+  expected_output: "Enter the height of the pyramid: -4\n   1\n  123\n 12345\n1234567\n 12345\n  123\n   1"
+  comparison_type: "equals"
+  is_bonus: true
