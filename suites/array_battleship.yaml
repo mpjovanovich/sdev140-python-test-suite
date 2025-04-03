@@ -1,0 +1,62 @@
+# Basic prompt and initialization tests
+- title: "Displays welcome message"
+  inputs: ["2", "0", "0"]
+  expected_output: "Welcome to Battleship!"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Prompts for board size"
+  inputs: ["2", "0", "0"]
+  expected_output: "Player 1, enter the board size: "
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Prompts for ship coordinate"
+  inputs: ["2", "0", "0"]
+  expected_output: "Player 1, enter the ship coordinate: "
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Prompts for guess coordinate"
+  inputs: ["2", "0", "0"]
+  expected_output: "Player 2, enter a guessed coordinate: "
+  comparison_type: "contains"
+  is_bonus: false
+
+# Board display tests
+- title: "Displays initial empty board"
+  inputs: ["2", "0", "0"]
+  expected_output: ". ."
+  comparison_type: "contains"
+  is_bonus: false
+
+# Gameplay tests
+- title: "Single hit sequence"
+  inputs: ["2", "1", "1"]
+  expected_output: ". X \nHit! You sank the ship!"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Miss then hit - shows miss"
+  inputs: ["2", "1", "0", "1"]
+  expected_output: "O . \nMiss!"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Miss then hit - shows final state"
+  inputs: ["2", "1", "0", "1"]
+  expected_output: "O X \nHit! You sank the ship!"
+  comparison_type: "contains"
+  is_bonus: false
+# # Bonus tests
+# - title: "Validates guess within bounds - too high"
+#   inputs: ["3", "1", "4"]
+#   expected_output: "Invalid coordinate. Please enter a number between 0 and 2."
+#   comparison_type: "contains"
+#   is_bonus: true
+
+# - title: "Validates guess within bounds - negative"
+#   inputs: ["3", "1", "-1"]
+#   expected_output: "Invalid coordinate. Please enter a number between 0 and 2."
+#   comparison_type: "contains"
+#   is_bonus: true
