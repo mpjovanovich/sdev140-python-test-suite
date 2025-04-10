@@ -1,8 +1,3 @@
-- title: "Correct prompt for showing"
-  inputs: ["evening", "3", "2", "yes"]
-  expected_output: "Is the movie a matinee or evening showing? (matinee/evening): "
-  comparison_type: "contains"
-  is_bonus: false
 # Basic prompt tests
 - title: "Correct prompt for showing"
   inputs: ["evening", "3", "2", "yes"]

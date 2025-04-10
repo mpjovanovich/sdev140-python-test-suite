@@ -1,0 +1,64 @@
+# Course addition tests
+- title: "Add new course successfully"
+  inputs: ["2", "SDEV 140", "Intro to Programming", "5"]
+  expected_output: "Course 'SDEV 140' added successfully!"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Add duplicate course"
+  inputs:
+    [
+      "2",
+      "SDEV 140",
+      "Intro to Programming",
+      "2",
+      "SDEV 140",
+      "Different Course",
+      "5",
+    ]
+  expected_output: "Course 'SDEV 140' already exists."
+  comparison_type: "contains"
+  is_bonus: false
+
+# Course removal tests
+- title: "Remove existing course"
+  inputs: ["2", "SDEV 140", "Intro to Programming", "3", "SDEV 140", "5"]
+  expected_output: "Course 'SDEV 140' removed successfully!"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Remove non-existent course"
+  inputs: ["3", "SDEV 999", "5"]
+  expected_output: "Course 'SDEV 999' not found."
+  comparison_type: "contains"
+  is_bonus: false
+
+# Course existence tests
+- title: "Check existing course"
+  inputs: ["2", "SDEV 140", "Intro to Programming", "4", "SDEV 140", "5"]
+  expected_output: "Course 'SDEV 140' exists."
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Check non-existent course"
+  inputs: ["4", "SDEV 999", "5"]
+  expected_output: "Course 'SDEV 999' not found."
+  comparison_type: "contains"
+  is_bonus: false
+
+# Display tests with courses
+- title: "Display multiple courses"
+  inputs:
+    [
+      "2",
+      "SDEV 140",
+      "Intro to Programming",
+      "2",
+      "CS102",
+      "Data Structures",
+      "1",
+      "5",
+    ]
+  expected_output: "SDEV 140: Intro to Programming"
+  comparison_type: "contains"
+  is_bonus: false
