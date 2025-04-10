@@ -5,4 +5,4 @@ decision_structures: suites/decision_structures.yaml
 password_checker: suites/password_checker.yaml
 number_pyramids: suites/number_pyramids.yaml
 array_battleship: suites/array_battleship.yaml
-dictionary_course_management: suites/dictionary_course_management.yaml
+course_management_dictionaries: suites/course_management_dictionaries.yaml
