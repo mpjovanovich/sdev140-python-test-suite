@@ -1,0 +1,57 @@
+# Input validation tests - coordinates
+- title: "Invalid x1 coordinate input"
+  inputs: ["abc"]
+  expected_output: "Invalid input: Coordinate must be a number"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Invalid y1 coordinate input"
+  inputs: ["0", "1.2.3"]
+  expected_output: "Invalid input: Coordinate must be a number"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Input validation tests - precision
+- title: "Invalid precision - non-numeric"
+  inputs: ["0", "0", "3", "4", "abc"]
+  expected_output: "Invalid input: Precision must be an integer"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Invalid precision - decimal"
+  inputs: ["0", "0", "3", "4", "1.5"]
+  expected_output: "Invalid input: Precision must be an integer"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Basic functionality tests
+- title: "Basic horizontal line test"
+  inputs: ["0", "0", "3", "0", "2"]
+  expected_output: "Distance = 3.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "3-4-5 triangle test"
+  inputs: ["0", "0", "3", "4", "2"]
+  expected_output: "Distance = 5.00"
+  comparison_type: "contains"
+  is_bonus: false
+
+# Edge cases
+- title: "Negative coordinates test"
+  inputs: ["-2", "-1", "2", "2", "1"]
+  expected_output: "Distance = 5.0"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "High precision test"
+  inputs: ["1.1", "2.1", "1.2", "2.3", "5"]
+  expected_output: "Distance = 0.22361"
+  comparison_type: "contains"
+  is_bonus: false
+
+- title: "Zero distance test"
+  inputs: ["1", "1", "1", "1", "2"]
+  expected_output: "Distance = 0.00"
+  comparison_type: "contains"
+  is_bonus: false

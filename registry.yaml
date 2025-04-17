@@ -6,3 +6,4 @@ password_checker: suites/password_checker.yaml
 number_pyramids: suites/number_pyramids.yaml
 array_battleship: suites/array_battleship.yaml
 course_management_dictionaries: suites/course_management_dictionaries.yaml
+functions_distance_calculation: suites/functions_distance_calculation.yaml
