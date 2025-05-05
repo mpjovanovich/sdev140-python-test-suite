@@ -1,25 +1,25 @@
 # Input validation tests - coordinates
 - title: "Invalid x1 coordinate input"
-  inputs: ["abc"]
+  inputs: ["abc", "0", "0", "0", "0", "0"]
   expected_output: "Invalid input: Coordinate must be a number"
   comparison_type: "contains"
   is_bonus: false
 
 - title: "Invalid y1 coordinate input"
-  inputs: ["0", "1.2.3"]
+  inputs: ["0", "1.2.3", "0", "0", "0", "0"]
   expected_output: "Invalid input: Coordinate must be a number"
   comparison_type: "contains"
   is_bonus: false
 
 # Input validation tests - precision
 - title: "Invalid precision - non-numeric"
-  inputs: ["0", "0", "3", "4", "abc"]
+  inputs: ["0", "0", "3", "4", "abc", "0"]
   expected_output: "Invalid input: Precision must be an integer"
   comparison_type: "contains"
   is_bonus: false
 
 - title: "Invalid precision - decimal"
-  inputs: ["0", "0", "3", "4", "1.5"]
+  inputs: ["0", "0", "3", "4", "1.5", "0"]
   expected_output: "Invalid input: Precision must be an integer"
   comparison_type: "contains"
   is_bonus: false
